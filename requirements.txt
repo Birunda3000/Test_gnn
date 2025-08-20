@@ -1,0 +1,16 @@
+# requirements.txt
+
+# As bibliotecas torch, torchvision, e torchaudio já vêm pré-instaladas
+# na imagem base da NVIDIA.
+
+# torch_geometric será instalado separadamente no Dockerfile para garantir compatibilidade.
+
+# Bibliotecas para manipulação de dados e métricas
+pandas
+numpy
+scikit-learn
+psutil
+
+# Ferramentas de linting e formatação
+flake8
+black

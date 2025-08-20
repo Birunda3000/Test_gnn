@@ -1,0 +1,39 @@
+// .devcontainer/devcontainer.json
+
+{
+  "name": "GNN Paper Environment (Ivo's Project)",
+  "dockerComposeFile": "../docker-compose.yml", // Aponta para o arquivo na raiz
+  "service": "gnn_dev_service", // Deve ser o mesmo nome do serviço no docker-compose.yml
+  "workspaceFolder": "/workspace", // Deve ser o mesmo do working_dir
+  "customizations": {
+    "vscode": {
+      // Suas extensões preferidas são ótimas para este projeto.
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-python.black-formatter",
+        "github.copilot",
+        "github.copilot-chat",
+        "esbenp.prettier-vscode",
+        "docker.docker"
+      ],
+      // Suas configurações são excelentes.
+      "settings": {
+        "editor.wordWrap": "on",
+        "jupyter.jupyterServerType": "local",
+        "editor.formatOnSave": true,
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter"
+        },
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": true,
+        "python.linting.lintOnSave": true,
+        "python.defaultInterpreterPath": "/usr/bin/python3"
+      }
+    }
+  },
+  // Comando executado após a criação do container.
+  // Instala as dependências do nosso requirements.txt na raiz.
+  "postCreateCommand": "pip install -r requirements.txt"
+}

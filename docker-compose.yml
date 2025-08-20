@@ -1,0 +1,23 @@
+# docker-compose.yml (Versão Flexível - CPU por Padrão)
+
+services:
+  gnn_dev_service:
+    build: .
+    container_name: gnn_project_container
+
+    # A linha abaixo foi COMENTADA. Por padrão, este container rodará em modo CPU.
+    # Ele funcionará em qualquer máquina, com ou sem placa de vídeo NVIDIA.
+    #
+    # QUANDO VOCÊ ESTIVER NUM PC COM GPU, descomente a linha a seguir 
+    # para ativar a aceleração gráfica.
+    # runtime: nvidia
+
+    ports:
+      - "8888:8888"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - .:/workspace
+      - ./data:/workspace/data
+    working_dir: /workspace
+    command: ["/bin/bash", "-c", "while true; do sleep infinity; done"]
