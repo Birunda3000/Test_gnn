@@ -9,7 +9,7 @@ def train(model, data, epochs, learning_rate, weight_decay, verbose=True):
     model.train()
     opt = torch.optim.Adam(model.parameters(), lr=learning_rate, weight_decay=weight_decay)
     
-    start_time = time.time() # [MUDANÇA] Começa a contar o tempo
+    start_time = time.time()
     
     for epoch in range(epochs):
         opt.zero_grad()
@@ -22,9 +22,14 @@ def train(model, data, epochs, learning_rate, weight_decay, verbose=True):
             with torch.no_grad():
                 pred = out[data.train_mask].argmax(dim=1)
                 acc = (pred == data.y[data.train_mask]).sum().item() / data.train_mask.sum().item()
-                print(f"Epoch {epoch+1}/{epochs} | Loss: {loss.item():.4f} | Train Acc: {acc:.4f}")
+                
+                # Calcula acurácia no teste
+                test_pred = out[data.test_mask].argmax(dim=1)
+                test_acc = (test_pred == data.y[data.test_mask]).sum().item() / data.test_mask.sum().item()
+                
+                print(f"Epoch {epoch+1}/{epochs} | Loss: {loss.item():.4f} | Train Acc: {acc:.4f} | Test Acc: {test_acc:.4f}")
 
-    end_time = time.time() # [MUDANÇA] Termina de contar o tempo
+    end_time = time.time()
     training_duration = end_time - start_time
     
     print(f"Treino finalizado em {training_duration:.2f} segundos.")

@@ -1,0 +1,93 @@
+workspace/
+├── .devcontainer
+│   └── devcontainer.json
+├── data
+│   ├── musae-facebook
+│   │   └── facebook_large
+│   │       ├── README.txt
+│   │       ├── citing.txt
+│   │       ├── musae_facebook_edges.csv
+│   │       ├── musae_facebook_features.json
+│   │       └── musae_facebook_target.csv
+│   └── musae-github
+│       └── git_web_ml
+│           ├── README.txt
+│           ├── citing.txt
+│           ├── musae_git_edges.csv
+│           ├── musae_git_features.json
+│           └── musae_git_target.csv
+├── env_check
+│   ├── check_pytorch_env.py
+│   └── env_check.txt
+├── output
+│   ├── 2025-08-21_14-40-53__test_acc_0.7818
+│   │   ├── models
+│   │   │   ├── APPNPNet.pt
+│   │   │   ├── GATNet.pt
+│   │   │   ├── GCNNet.pt
+│   │   │   ├── GINNet.pt
+│   │   │   ├── SAGENet.pt
+│   │   │   └── SGConvNet.pt
+│   │   └── relatorio.txt
+│   ├── 2025-08-21_14-59-40__test_acc_0.7889
+│   │   ├── models
+│   │   │   ├── APPNPNet.pt
+│   │   │   ├── GATNet.pt
+│   │   │   ├── GCNNet.pt
+│   │   │   ├── GINNet.pt
+│   │   │   ├── SAGENet.pt
+│   │   │   └── SGConvNet.pt
+│   │   └── relatorio.txt
+│   ├── 2025-08-21_15-02-40__test_acc_0.7906
+│   │   ├── models
+│   │   │   ├── APPNPNet.pt
+│   │   │   ├── GATNet.pt
+│   │   │   ├── GCNNet.pt
+│   │   │   ├── GINNet.pt
+│   │   │   ├── SAGENet.pt
+│   │   │   └── SGConvNet.pt
+│   │   └── relatorio.txt
+│   ├── 2025-08-21_15-14-28__test_acc_0.8184
+│   │   ├── models
+│   │   │   ├── APPNPNet.pt
+│   │   │   ├── GATNet.pt
+│   │   │   ├── GCNNet.pt
+│   │   │   ├── GINNet.pt
+│   │   │   ├── SAGENet.pt
+│   │   │   └── SGConvNet.pt
+│   │   └── relatorio.txt
+│   ├── 2025-08-21_15-38-50__test_acc_0.8004
+│   │   ├── models
+│   │   │   ├── APPNPNet.pt
+│   │   │   ├── GATNet.pt
+│   │   │   ├── GCNNet.pt
+│   │   │   ├── GINNet.pt
+│   │   │   ├── SAGENet.pt
+│   │   │   └── SGConvNet.pt
+│   │   └── relatorio.txt
+│   └── 2025-08-21_16-55-41__test_acc_0.7655
+│       ├── models
+│       │   ├── APPNPNet.pt
+│       │   ├── GATNet.pt
+│       │   ├── GCNNet.pt
+│       │   ├── GINNet.pt
+│       │   ├── SAGENet.pt
+│       │   └── SGConvNet.pt
+│       └── relatorio.txt
+├── src
+│   ├── __init__.py
+│   ├── config.py
+│   ├── data_loader.py
+│   ├── engine.py
+│   └── models.py
+├── .gitignore
+├── .python-version
+├── Dockerfile
+├── README.md
+├── docker-compose.yml
+├── gpu_test.py
+├── main.py
+├── main2.py
+├── pyproject.toml
+├── requirements.txt
+└── ...

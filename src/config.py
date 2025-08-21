@@ -4,14 +4,15 @@
 OUTPUT_DIR = "output" # Nome da pasta principal para salvar os experimentos
 
 # --- Configurações do Modelo ---
-EMBEDDING_DIM = 256
-HIDDEN_DIM = 128
+EMBEDDING_DIM = 64
+HIDDEN_DIM = 32
 GAT_HEADS = 4
+DROPOUT = 0.6
 
 # --- Configurações de Treinamento ---
-EPOCHS = 500
-LEARNING_RATE = 0.005
-WEIGHT_DECAY = 5e-4
+EPOCHS = 3000
+LEARNING_RATE = 0.0005
+WEIGHT_DECAY = 5e-5
 
 # --- Configurações dos Dados ---
 DATASETS_INFO = {

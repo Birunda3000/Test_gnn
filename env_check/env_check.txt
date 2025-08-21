@@ -1,0 +1,49 @@
+
+================================================================================
+### INÍCIO DO DIAGNÓSTICO DO AMBIENTE PYTORCH ###
+Timestamp: 2025-08-21 17:49:33
+--------------------------------------------------------------------------------
+
+[INFO] Ambiente de Execução: Container Docker
+
+[INFO] Verificando recursos de hardware...
+  - CPU Modelo: x86_64
+  - Núcleos Físicos: 6
+  - Núcleos Lógicos: 12
+  - Memória RAM Total: 7.64 GB (Usada: 40.7%)
+
+[INFO] Verificando versões do sistema e bibliotecas...
+  - Versão do Python: 3.10.12
+  - Sistema Operacional: Linux 5.15.153.1-microsoft-standard-WSL2
+  - Versão do PyTorch: 2.3.1+cu121
+  - Versão do PyTorch Geometric: 2.6.1
+
+[INFO] Procurando por dispositivos GPU (CUDA)...
+  - [SUCESSO] 1 GPU(s) com CUDA encontrada(s):
+    - GPU[0]: NVIDIA GeForce RTX 3060 Ti
+    - Versão CUDA (Runtime): 12.1
+    - Versão cuDNN (Runtime): 8902
+
+[INFO] Verificando otimizações avançadas do PyTorch...
+  - [SUCESSO] Compilador (torch.compile) está disponível e funcional.
+  - [INFO] Suporte a Mixed Precision (bfloat16): Sim
+  - [SUCESSO] Mixed Precision (AMP com float16) foi ativada com sucesso.
+
+[INFO] Iniciando teste de performance em: cpu (Matriz 4096x4096)
+  - [RESULTADO] Tempo de execução em cpu: 0.3569 segundos.
+
+[INFO] Iniciando teste de performance em: cuda:0 (Matriz 4096x4096)
+  - [RESULTADO] Tempo de execução em cuda:0: 0.0539 segundos.
+
+================================================================================
+### DIAGNÓSTICO FINAL DO AMBIENTE PYTORCH ###
+Timestamp: 2025-08-21 17:49:38
+--------------------------------------------------------------------------------
+✔️ Ambiente de Execução: Container Docker.
+✔️ Aceleração por GPU: Ativa e Testada.
+   - Tempo de execução na GPU: 0.0539s
+   - Tempo de execução na CPU: 0.3569s
+   - Otimização: A GPU é aproximadamente 6.62x mais rápida que a CPU.
+
+   >>> [AVALIAÇÃO GERAL]: SUCESSO! Ambiente otimizado para Deep Learning. <<<
+================================================================================
