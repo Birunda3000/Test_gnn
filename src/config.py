@@ -1,9 +1,12 @@
 # src/config.py
 
+# --- Nova Configuração ---
+OUTPUT_DIR = "output" # Nome da pasta principal para salvar os experimentos
+
 # --- Configurações do Modelo ---
-EMBEDDING_DIM = 256  # Dimensão das features que serão aprendidas
-HIDDEN_DIM = 128     # Dimensão das camadas ocultas
-GAT_HEADS = 4        # Número de heads para o modelo GATNet
+EMBEDDING_DIM = 256
+HIDDEN_DIM = 128
+GAT_HEADS = 4
 
 # --- Configurações de Treinamento ---
 EPOCHS = 500
@@ -25,5 +28,4 @@ DATASETS_INFO = {
 }
 
 # --- Configurações da Execução ---
-# Lista de datasets para rodar. Ex: ["Musae-Github", "Musae-Facebook"]
 DATASET_TO_RUN = ["Musae-Github"]

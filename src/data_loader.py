@@ -1,4 +1,4 @@
-# src/data_loader.py
+# src/data_loader.py (versão limpa)
 
 import os
 import torch
@@ -11,13 +11,16 @@ def load_data(edges_path, target_path, target_col, id_col='id'):
     edges_df = pd.read_csv(edges_path)
     target_df = pd.read_csv(target_path)
 
-    node_ids = np.sort(np.unique(np.concatenate([edges_df['id_1'], edges_df['id_2']])))
+    # Corrigindo para usar os nomes de coluna corretos
+    source_col, target_col_edge = edges_df.columns[0], edges_df.columns[1]
+
+    node_ids = np.sort(np.unique(np.concatenate([edges_df[source_col], edges_df[target_col_edge]])))
     id_map = {nid: i for i, nid in enumerate(node_ids)}
     num_nodes = len(node_ids)
 
     edge_index = np.array([
         [id_map[src], id_map[dst]]
-        for src, dst in zip(edges_df['id_1'], edges_df['id_2']) if src in id_map and dst in id_map
+        for src, dst in zip(edges_df[source_col], edges_df[target_col_edge]) if src in id_map and dst in id_map
     ]).T
     edge_index = torch.tensor(edge_index, dtype=torch.long)
 
