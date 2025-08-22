@@ -1,0 +1,23 @@
+========================================
+### RELATÓRIO DO EXPERIMENTO ###
+========================================
+
+CONFIGURAÇÕES:
+  - Timestamp: 22/08/2025 02:01:22 (UTC+0000)
+  - Embedding Dim: 64
+  - Hidden Dim: 32
+  - Num Layers: 2
+  - Dropout: 0.4
+  - Epochs: 20000
+  - Learning Rate: 0.0001
+  - Weight Decay: 0.0001
+  - Patience (Early Stop): 600
+
+RESULTADOS POR MODELO:
+    Model  Train Time (s)  Train Acc  Train F1  Train Recall  Val Acc  Val F1  Val Recall  Test Acc  Test F1  Test Recall
+   GCNNet        593.9436     0.8671    0.8470        0.8242   0.7744  0.6909      0.6805    0.7744   0.6830       0.6725
+  SAGENet       1068.6094     0.8558    0.7953        0.7599   0.7947  0.6832      0.6635    0.7945   0.6833       0.6630
+   GATNet       1004.5125     0.8066    0.7022        0.6748   0.7926  0.6709      0.6500    0.7897   0.6593       0.6405
+   GINNet        649.3433     0.8025    0.6985        0.6723   0.7866  0.6526      0.6348    0.7855   0.6498       0.6327
+ APPNPNet        137.1288     0.7404    0.4435        0.5051   0.7349  0.4423      0.5046    0.7355   0.4407       0.5032
+SGConvNet       1159.6623     0.9001    0.8718        0.8474   0.7689  0.6886      0.6794    0.7765   0.6904       0.6802

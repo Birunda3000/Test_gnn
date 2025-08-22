@@ -4,15 +4,22 @@
 OUTPUT_DIR = "output" # Nome da pasta principal para salvar os experimentos
 
 # --- Configurações do Modelo ---
-EMBEDDING_DIM = 64
-HIDDEN_DIM = 32
-GAT_HEADS = 4
-DROPOUT = 0.6
+EMBEDDING_DIM = 256
+HIDDEN_DIM = 256
+GAT_HEADS = 8
+DROPOUT = 0.4
+NUM_LAYERS = 4  # NOVO: Número de camadas para os modelos GNN
+
+# --- Hiperparâmetros Específicos (Opcional, mas recomendado) ---
+APPNP_K = 10
+APPNP_ALPHA = 0.1
+SGCONV_K = 2
 
 # --- Configurações de Treinamento ---
-EPOCHS = 3000
-LEARNING_RATE = 0.0005
-WEIGHT_DECAY = 5e-5
+EPOCHS = 20000 # Aumentado para dar espaço ao Early Stopping
+LEARNING_RATE = 0.0001
+WEIGHT_DECAY = 5e-4
+PATIENCE = 1000
 
 # --- Configurações dos Dados ---
 DATASETS_INFO = {

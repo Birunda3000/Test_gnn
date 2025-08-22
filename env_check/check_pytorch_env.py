@@ -16,7 +16,7 @@ import torch
 import torch.backends.cudnn as cudnn
 from torch_geometric import __version__ as pyg_version
 
-# --- Funções Auxiliares (mantidas e adaptadas) ---
+
 def formatar_bytes(b):
     if b < 1024: return f"{b} Bytes"
     elif b < 1024**2: return f"{b/1024:.2f} KB"
@@ -68,7 +68,7 @@ def verificar_dispositivos_gpu_pytorch():
 
 def verificar_otimizacoes_avancadas_pytorch():
     print("\n[INFO] Verificando otimizações avançadas do PyTorch...")
-    # 1. Verificação do compilador (torch.compile) - Equivalente moderno do JIT/XLA
+    # 1. Verificação do compilador (torch.compile)
     if hasattr(torch, 'compile'):
         try:
             @torch.compile
@@ -144,7 +144,7 @@ def imprimir_sumario_final(is_docker, tem_gpu, tempo_gpu, tempo_cpu):
 
 def main():
     imprimir_cabecalho("Início do Diagnóstico do Ambiente PyTorch")
-    TAMANHO_DA_MATRIZ_DE_TESTE = 4096 # Um pouco menor para rodar rápido em mais hardwares
+    TAMANHO_DA_MATRIZ_DE_TESTE = 8192
     
     is_docker = verificar_execucao_docker()
     verificar_recursos_hardware()
