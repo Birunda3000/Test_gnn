@@ -1,0 +1,46 @@
+import pandas as pd
+import json
+
+def check_feature_consistency(dataset_name, target_path, features_path):
+    """
+    Carrega um conjunto de dados, junta as features e verifica se todas as amostras
+    têm o mesmo número de features.
+    """
+    print(f"--- Verificando o conjunto de dados: {dataset_name} ---")
+    try:
+        df_target = pd.read_csv(target_path)
+        with open(features_path, 'r') as f:
+            features_data = json.load(f)
+    except FileNotFoundError:
+        print(f"Arquivos não encontrados para o conjunto de dados {dataset_name}. Verifique os caminhos.\n")
+        return
+
+    # Adiciona as features ao DataFrame
+    df_target['features'] = df_target['id'].astype(str).map(features_data)
+
+    # Remove qualquer linha onde a feature não foi encontrada (se houver)
+    df_target.dropna(subset=['features'], inplace=True)
+
+    # Calcula o número de features para cada amostra
+    df_target['num_features'] = df_target['features'].apply(len)
+
+    # Verifica se todos os valores na coluna 'num_features' são iguais
+    unique_feature_counts = df_target['num_features'].unique()
+
+    if len(unique_feature_counts) == 1:
+        print(f"Sim, todas as amostras têm a mesma quantidade de features: {unique_feature_counts[0]}")
+    else:
+        print("Não, as amostras têm quantidades diferentes de features.")
+        print(f"Quantidades encontradas: {unique_feature_counts}")
+    print("-" * (30 + len(dataset_name)) + "\n")
+
+# Caminhos para os arquivos do GitHub
+github_target_path = 'data/musae-github/git_web_ml/musae_git_target.csv'
+github_features_path = 'data/musae-github/git_web_ml/musae_git_features.json'
+
+# Caminhos para os arquivos do Facebook
+facebook_target_path = 'data/musae-facebook/facebook_large/musae_facebook_target.csv'
+facebook_features_path = 'data/musae-facebook/facebook_large/musae_facebook_features.json'
+
+# Executa a verificação para os dois conjuntos de dados
+check_feature_consistency('GitHub', github_target_path, github_features_path)

@@ -20,24 +20,6 @@ workspace/
 │   ├── check_pytorch_env.py
 │   └── env_check.txt
 ├── output
-│   ├── 2025-08-21_14-40-53__test_acc_0.7818
-│   │   ├── models
-│   │   │   ├── APPNPNet.pt
-│   │   │   ├── GATNet.pt
-│   │   │   ├── GCNNet.pt
-│   │   │   ├── GINNet.pt
-│   │   │   ├── SAGENet.pt
-│   │   │   └── SGConvNet.pt
-│   │   └── relatorio.txt
-│   ├── 2025-08-21_14-59-40__test_acc_0.7889
-│   │   ├── models
-│   │   │   ├── APPNPNet.pt
-│   │   │   ├── GATNet.pt
-│   │   │   ├── GCNNet.pt
-│   │   │   ├── GINNet.pt
-│   │   │   ├── SAGENet.pt
-│   │   │   └── SGConvNet.pt
-│   │   └── relatorio.txt
 │   ├── 2025-08-21_15-02-40__test_acc_0.7906
 │   │   ├── models
 │   │   │   ├── APPNPNet.pt
@@ -65,29 +47,65 @@ workspace/
 │   │   │   ├── SAGENet.pt
 │   │   │   └── SGConvNet.pt
 │   │   └── relatorio.txt
-│   └── 2025-08-21_16-55-41__test_acc_0.7655
+│   ├── 2025-08-21_20-02-23__test_acc_0.7850
+│   │   ├── models
+│   │   │   ├── APPNPNet.pt
+│   │   │   ├── GATNet.pt
+│   │   │   ├── GCNNet.pt
+│   │   │   ├── GINNet.pt
+│   │   │   ├── SAGENet.pt
+│   │   │   └── SGConvNet.pt
+│   │   ├── APPNPNet_accuracy_plot.png
+│   │   ├── GATNet_accuracy_plot.png
+│   │   ├── GCNNet_accuracy_plot.png
+│   │   ├── GINNet_accuracy_plot.png
+│   │   ├── SAGENet_accuracy_plot.png
+│   │   ├── SGConvNet_accuracy_plot.png
+│   │   └── relatorio.txt
+│   ├── 2025-08-21_23-08-42__test_acc_0.8004
+│   │   ├── models
+│   │   │   ├── APPNPNet__test_acc_0.7388.pt
+│   │   │   ├── GATNet__test_acc_0.8004.pt
+│   │   │   ├── GCNNet__test_acc_0.7576.pt
+│   │   │   ├── GINNet__test_acc_0.7926.pt
+│   │   │   ├── SAGENet__test_acc_0.7901.pt
+│   │   │   └── SGConvNet__test_acc_0.7459.pt
+│   │   ├── APPNPNet_accuracy_plot.png
+│   │   ├── GATNet_accuracy_plot.png
+│   │   ├── GCNNet_accuracy_plot.png
+│   │   ├── GINNet_accuracy_plot.png
+│   │   ├── SAGENet_accuracy_plot.png
+│   │   ├── SGConvNet_accuracy_plot.png
+│   │   └── relatorio.txt
+│   ├── 2025-08-22_00-44-32__test_acc_0.7945
+│   │   ├── models
+│   │   │   ├── APPNPNet__test_acc_0.7355.pt
+│   │   │   ├── GATNet__test_acc_0.7897.pt
+│   │   │   ├── GCNNet__test_acc_0.7744.pt
+│   │   │   ├── GINNet__test_acc_0.7855.pt
+│   │   │   ├── SAGENet__test_acc_0.7945.pt
+│   │   │   └── SGConvNet__test_acc_0.7765.pt
+│   │   ├── APPNPNet_accuracy_plot.png
+│   │   ├── GATNet_accuracy_plot.png
+│   │   ├── GCNNet_accuracy_plot.png
+│   │   ├── GINNet_accuracy_plot.png
+│   │   ├── SAGENet_accuracy_plot.png
+│   │   ├── SGConvNet_accuracy_plot.png
+│   │   └── relatorio.txt
+│   └── _tmp_2025-08-22_12-51-42
 │       ├── models
-│       │   ├── APPNPNet.pt
-│       │   ├── GATNet.pt
-│       │   ├── GCNNet.pt
-│       │   ├── GINNet.pt
-│       │   ├── SAGENet.pt
-│       │   └── SGConvNet.pt
-│       └── relatorio.txt
+│       │   └── GCNNet__test_acc_0.7484.pt
+│       └── GCNNet_accuracy_plot.png
 ├── src
-│   ├── __init__.py
-│   ├── config.py
-│   ├── data_loader.py
-│   ├── engine.py
-│   └── models.py
+│   └── __init__.py
 ├── .gitignore
 ├── .python-version
 ├── Dockerfile
 ├── README.md
 ├── docker-compose.yml
+├── env_check.txt
 ├── gpu_test.py
 ├── main.py
 ├── main2.py
 ├── pyproject.toml
-├── requirements.txt
 └── ...

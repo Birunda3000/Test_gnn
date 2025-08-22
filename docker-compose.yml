@@ -10,7 +10,7 @@ services:
     #
     # QUANDO VOCÊ ESTIVER NUM PC COM GPU, descomente a linha a seguir 
     # para ativar a aceleração gráfica.
-    runtime: nvidia
+    #runtime: nvidia
 
     ports:
       - "8888:8888"
