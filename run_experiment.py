@@ -59,7 +59,7 @@ def generate_accuracy_plot(history, model_name, output_dir):
         x_axis,
         history["val_acc"],
         label="Acurácia de Validação",
-        marker="s",
+        #marker="s",
         linewidth=1.5,
         alpha=0.7
     )
@@ -67,7 +67,7 @@ def generate_accuracy_plot(history, model_name, output_dir):
         x_axis,
         history["test_acc"],
         label="Acurácia de Teste (Monitorada)",
-        marker="x",
+        #marker="x",
         linestyle="--",
         linewidth=2.5,
     )

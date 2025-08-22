@@ -16,9 +16,9 @@ def train(model, data, epochs, learning_rate, weight_decay, patience, verbose=Tr
     )
     
     # --- NOVO: Instanciando o agendador ReduceLROnPlateau ---
-    # Monitora a acurácia de teste. Se não melhorar por 5 checagens (50 épocas),
+    # Monitora a acurácia de teste. Se não melhorar por 4 checagens (40 épocas),
     # o learning rate será reduzido pela metade (fator 0.5).
-    scheduler = ReduceLROnPlateau(opt, mode='max', factor=0.5, patience=5, verbose=True)
+    scheduler = ReduceLROnPlateau(opt, mode='max', factor=0.5, patience=4, verbose=True)
 
     start_time = time.time()
 
