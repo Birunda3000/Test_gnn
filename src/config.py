@@ -16,8 +16,8 @@ TARGET_FILE = os.path.join(DATA_DIR, "musae_git_target.csv")
 
 # --- 2. Configurações de Treinamento ---
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-EPOCHS = 201
-LEARNING_RATE = 0.01
+EPOCHS = 2001
+LEARNING_RATE = 0.0001
 WEIGHT_DECAY = 5e-4
 
 # --- 3. Configurações do Modelo ---
@@ -27,8 +27,8 @@ HIDDEN_CHANNELS = 16
 GAT_HEADS = 4
 
 # --- 4. Configurações da Divisão dos Dados ---
-TRAIN_RATIO = 0.6
-VALIDATION_RATIO = 0.2
-# A proporção de teste será o que sobrar (1.0 - 0.6 - 0.2 = 0.2)
+TRAIN_RATIO = 0.8
+VALIDATION_RATIO = 0.1
+# A proporção de teste será o que sobrar (1.0 - 0.8 - 0.1 = 0.1)
 
 RESULTS_DIR = "runs"

@@ -24,7 +24,7 @@ class SimpleGNN(torch.nn.Module):
         x = self.conv2(x, edge_index)
         return torch.sigmoid(x)
 
-# --- Seus novos modelos adaptados ---
+
 
 class GCNNet(torch.nn.Module):
     def __init__(self, in_c, hidden, out_c):

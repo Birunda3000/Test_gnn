@@ -1,0 +1,133 @@
+==============================
+ RELATÓRIO GERAL DA EXECUÇÃO
+==============================
+Início da Execução: 25/08/2025, 18:27:02
+
+
+--- Modelo: GCN ---
+Tempo de Treino: 27.51 segundos
+Melhor Época (Validação): 190
+Gráfico de Acurácia: GCN_accuracy_plot.png
+
+--- Métricas Finais (com o melhor modelo de validação) ---
+  Treino:
+    Acurácia: 0.8767
+    F1-Score: 0.7254
+    Recall:   0.6315
+  Validação:
+    Acurácia: 0.8619
+    F1-Score: 0.6959
+    Recall:   0.6024
+  Teste:
+    Acurácia: 0.8536
+    F1-Score: 0.6728
+    Recall:   0.5890
+
+
+--- Modelo: GraphSAGE ---
+Tempo de Treino: 235.78 segundos
+Melhor Época (Validação): 150
+Gráfico de Acurácia: GraphSAGE_accuracy_plot.png
+
+--- Métricas Finais (com o melhor modelo de validação) ---
+  Treino:
+    Acurácia: 0.9045
+    F1-Score: 0.7990
+    Recall:   0.7356
+  Validação:
+    Acurácia: 0.8727
+    F1-Score: 0.7357
+    Recall:   0.6758
+  Teste:
+    Acurácia: 0.8643
+    F1-Score: 0.7090
+    Recall:   0.6466
+
+
+--- Modelo: GAT ---
+Tempo de Treino: 71.62 segundos
+Melhor Época (Validação): 110
+Gráfico de Acurácia: GAT_accuracy_plot.png
+
+--- Métricas Finais (com o melhor modelo de validação) ---
+  Treino:
+    Acurácia: 0.8840
+    F1-Score: 0.7470
+    Recall:   0.6643
+  Validação:
+    Acurácia: 0.8649
+    F1-Score: 0.7081
+    Recall:   0.6252
+  Teste:
+    Acurácia: 0.8574
+    F1-Score: 0.6878
+    Recall:   0.6144
+
+
+--- Modelo: GIN ---
+Tempo de Treino: 227.88 segundos
+Melhor Época (Validação): 190
+Gráfico de Acurácia: GIN_accuracy_plot.png
+
+--- Métricas Finais (com o melhor modelo de validação) ---
+  Treino:
+    Acurácia: 0.8960
+    F1-Score: 0.7785
+    Recall:   0.7083
+  Validação:
+    Acurácia: 0.8564
+    F1-Score: 0.6962
+    Recall:   0.6277
+  Teste:
+    Acurácia: 0.8468
+    F1-Score: 0.6742
+    Recall:   0.6201
+
+
+--- Modelo: APPNP ---
+Tempo de Treino: 36.38 segundos
+Melhor Época (Validação): 200
+Gráfico de Acurácia: APPNP_accuracy_plot.png
+
+--- Métricas Finais (com o melhor modelo de validação) ---
+  Treino:
+    Acurácia: 0.8462
+    F1-Score: 0.6441
+    Recall:   0.5397
+  Validação:
+    Acurácia: 0.8390
+    F1-Score: 0.6323
+    Recall:   0.5281
+  Teste:
+    Acurácia: 0.8342
+    F1-Score: 0.6151
+    Recall:   0.5184
+
+
+--- Modelo: SGConv ---
+Tempo de Treino: 679.72 segundos
+Melhor Época (Validação): 170
+Gráfico de Acurácia: SGConv_accuracy_plot.png
+
+--- Métricas Finais (com o melhor modelo de validação) ---
+  Treino:
+    Acurácia: 0.8540
+    F1-Score: 0.6601
+    Recall:   0.5496
+  Validação:
+    Acurácia: 0.8566
+    F1-Score: 0.6685
+    Recall:   0.5513
+  Teste:
+    Acurácia: 0.8468
+    F1-Score: 0.6401
+    Recall:   0.5330
+
+
+==============================
+ HIPERPARÂMETROS GERAIS
+==============================
+Épocas: 201
+Taxa de Aprendizado: 0.01
+Decaimento de Peso: 0.0005
+Canais Ocultos: 16
