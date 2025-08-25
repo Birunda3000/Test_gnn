@@ -5,6 +5,7 @@ Contém as funções para o loop de treinamento e avaliação do modelo.
 """
 
 import torch
+from sklearn.metrics import accuracy_score, f1_score, recall_score
 
 def train_one_epoch(model, data, optimizer, criterion):
     """Executa uma única época de treinamento."""
@@ -17,15 +18,21 @@ def train_one_epoch(model, data, optimizer, criterion):
     return loss.item()
 
 def evaluate(model, data):
-    """Avalia o modelo nos conjuntos de treino, validação e teste."""
+    """Avalia o modelo e retorna um dicionário de métricas (acc, f1, recall)."""
     model.eval()
     with torch.no_grad():
         out = model(data.x, data.edge_index)
         pred = (out > 0.5).float()
         
-        accs = {}
+        metrics = {}
         for name, mask in [("Treino", data.train_mask), ("Validação", data.val_mask), ("Teste", data.test_mask)]:
-            correct = (pred[mask] == data.y[mask]).sum()
-            total = mask.sum()
-            accs[name] = int(correct) / int(total)
-    return accs
+            # Move os dados para a CPU para usar com o scikit-learn
+            y_true = data.y[mask].cpu()
+            y_pred = pred[mask].cpu()
+            
+            metrics[name] = {
+                'accuracy': accuracy_score(y_true, y_pred),
+                'f1': f1_score(y_true, y_pred, zero_division=0),
+                'recall': recall_score(y_true, y_pred, zero_division=0)
+            }
+    return metrics

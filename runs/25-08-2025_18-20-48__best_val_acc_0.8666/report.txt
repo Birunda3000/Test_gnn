@@ -1,0 +1,73 @@
+==============================
+ RELATÓRIO GERAL DA EXECUÇÃO
+==============================
+Início da Execução: 25/08/2025, 18:20:48
+
+
+--- Modelo: GCN ---
+Tempo de Treino: 28.25 segundos
+Melhor Época (Validação): 180
+Gráfico de Acurácia: GCN_accuracy_plot.png
+
+--- Métricas Finais (com o melhor modelo de validação) ---
+  Treino:
+    Acurácia: 0.8813
+    F1-Score: 0.7511
+    Recall:   0.6918
+  Validação:
+    Acurácia: 0.8594
+    F1-Score: 0.7137
+    Recall:   0.6648
+  Teste:
+    Acurácia: 0.8597
+    F1-Score: 0.6944
+    Recall:   0.6333
+
+
+--- Modelo: GraphSAGE ---
+Tempo de Treino: 237.94 segundos
+Melhor Época (Validação): 180
+Gráfico de Acurácia: GraphSAGE_accuracy_plot.png
+
+--- Métricas Finais (com o melhor modelo de validação) ---
+  Treino:
+    Acurácia: 0.9063
+    F1-Score: 0.8053
+    Recall:   0.7484
+  Validação:
+    Acurácia: 0.8666
+    F1-Score: 0.7280
+    Recall:   0.6774
+  Teste:
+    Acurácia: 0.8611
+    F1-Score: 0.6977
+    Recall:   0.6365
+
+
+--- Modelo: GAT ---
+Tempo de Treino: 75.33 segundos
+Melhor Época (Validação): 100
+Gráfico de Acurácia: GAT_accuracy_plot.png
+
+--- Métricas Finais (com o melhor modelo de validação) ---
+  Treino:
+    Acurácia: 0.8891
+    F1-Score: 0.7698
+    Recall:   0.7168
+  Validação:
+    Acurácia: 0.8592
+    F1-Score: 0.7141
+    Recall:   0.6673
+  Teste:
+    Acurácia: 0.8595
+    F1-Score: 0.6933
+    Recall:   0.6307
+
+
+==============================
+ HIPERPARÂMETROS GERAIS
+==============================
+Épocas: 201
+Taxa de Aprendizado: 0.01
+Decaimento de Peso: 0.0005
+Canais Ocultos: 16
